@@ -1,0 +1,15 @@
+#ifndef __PLATFORM_CONFIG_H_
+#define __PLATFORM_CONFIG_H_
+
+#define STDOUT_IS_PS7_UART
+#define UART_DEVICE_ID 0
+
+// ---- lwIP / Ethernet platform config ----
+#define PLATFORM_ZYNQ
+#define PLATFORM_EMAC_BASEADDR   XPAR_XEMACPS_0_BASEADDR
+
+#define TIMER_DEVICE_ID          XPAR_SCUTIMER_DEVICE_ID
+#define INTC_DEVICE_ID           XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define TIMER_IRPT_INTR          XPAR_SCUTIMER_INTR
+
+#endif
