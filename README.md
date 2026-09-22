@@ -113,13 +113,4 @@ If you regenerate the BSP, re-patch both copies of `lwipopts.h` (under
 `ps7_cortexa9_0/include/` and `libsrc/lwip211_v1_0/.../include/`) and
 rebuild `liblwip4.a`.
 
-## Troubleshooting
 
-- **`ping` works but TCP times out** - CPU is probably stopped at the
-  `main()` breakpoint; resume it.
-- **Nothing responds after `rst`** - a system reset wipes the PL; rerun
-  `ps7_init`, reprogram the bitstream, then download the ELF again.
-- **Transfer works once then fails** - fixed: firmware now resets the DMA
-  channels per frame; make sure you're running the current ELF.
-- **Connect timeout after many transfers** - fixed: connection cleanup
-  uses `tcp_abort` (leaked PCBs used to exhaust the pool).
