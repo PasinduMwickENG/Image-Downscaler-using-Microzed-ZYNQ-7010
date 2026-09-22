@@ -5,8 +5,9 @@ Ethernet, downscales it 2x in each dimension using a custom AXI4-Stream
 IP core in programmable logic, and sends the result back — all driven
 by an AXI DMA engine under lwIP/TCP control.
 
-Verified on hardware: `2738x1824` input -> `1369x912` output, repeatable,
+Verified on ZYNQ hardware: `2738x1824` input -> `1369x912` output, repeatable,
 over a direct 100 Mbps Ethernet link.
+
 
 ## Table of contents
 
